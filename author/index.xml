@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on ZeroBit Solutions</title>
+    <link>https://zerobit.pro/author/</link>
+    <description>Recent content in Authors on ZeroBit Solutions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>copyright &amp;copy; 2020 [ZeroBit Solutions](https://Zerobit.pro)</copyright>
+    
+	<atom:link href="https://zerobit.pro/author/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Animesh Roy</title>
+      <link>https://zerobit.pro/author/anir0y/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zerobit.pro/author/anir0y/</guid>
+      <description>HI, My name is Animesh Roy
+I am experienced in Delivering Training on Cybersecurity and Cloud Computing. I&amp;rsquo;m also working as a Freelancer Cybersecurity Consultant.</description>
+    </item>
+    
+  </channel>
+</rss>

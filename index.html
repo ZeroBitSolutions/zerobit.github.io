@@ -1,498 +1,616 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="es">
+<html lang="en-us">
 <head>
-	<title>ZeroBit</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"><meta charset="utf-8">
-   <!-- <meta http-equiv="Refresh" content="5; url='https://domain.lan'" /> -->
+	<meta charset="utf-8">
+	<title>ZeroBit Solutions</title>
 
+	<!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="Responsive Multipurpose Parallax HTML5 Template">
+	
+	<meta name="author" content="Anir0y">
+	<meta name="generator" content="Hugo 0.72.0" />
 
-	<style type="text/css">*,
-*::after,
-*::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	user-select: none;
-}
+	<!-- plugins -->
+	
+	<link rel="stylesheet" href="https://zerobit.pro/plugins/bootstrap/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="https://zerobit.pro/plugins/themify-icons/themify-icons.css">
+	
+	<link rel="stylesheet" href="https://zerobit.pro/plugins/magnific-popup/magnific-popup.css">
+	
+	<link rel="stylesheet" href="https://zerobit.pro/plugins/slick/slick.css">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
+	
 
-/* Generic */
-body {
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #fdfbfd;
-}
+	<!-- Main Stylesheet -->
+	
+	<link rel="stylesheet" href="https://zerobit.pro/css/style.min.css" media="screen">
 
-.main {
-	position: relative;
-	width: 37.5vmax;
-	height: 37.5vmax;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+  <!-- Custom stylesheet - for your changes -->
+  <link rel="stylesheet" href="/css/custom.css" media="screen">
 
-.leg {
-	position: absolute;
-	bottom: 0;
-	width: 3vmax;
-	height: 4.125vmax;
-}
+	<!--Favicon-->
+	<link rel="shortcut icon" href="https://zerobit.pro/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="https://zerobit.pro/images/favicon.png" type="image/x-icon">
 
-.paw {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 3.75vmax;
-	height: 1.875vmax;
-	overflow: hidden;
-}
-.paw::before {
-	content: "";
-	position: absolute;
-	width: 3.75vmax;
-	height: 3.75vmax;
-	border-radius: 50%;
-}
+	
 
-.top {
-	position: absolute;
-	bottom: 0;
-	left: 0.75vmax;
-	height: 4.5vmax;
-	width: 2.625vmax;
-	border-top-left-radius: 1.425vmax;
-	border-top-right-radius: 1.425vmax;
-	transform-origin: bottom right;
-	transform: rotateZ(90deg) translateX(-0.1vmax) translateY(1.5vmax);
-	z-index: -1;
-	background-image: linear-gradient(70deg, transparent 20%, #ff8b56 20%);
-}
-
-.dog {
-	position: relative;
-	width: 22.5vmax;
-	height: 8.25vmax;
-}
-.dog::before {
-	content: "";
-	position: absolute;
-	bottom: -0.75vmax;
-	right: -0.15vmax;
-	width: 100%;
-	height: 1.5vmax;
-	background-color: rgba(28, 49, 48, 0.1);
-	border-radius: 50%;
-	z-index: -1000;
-	animation: shadow 10s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
-}
-.dog__head {
-	position: absolute;
-	left: 1.5vmax;
-	bottom: 0;
-	width: 9.75vmax;
-	height: 8.25vmax;
-	border-top-left-radius: 4.05vmax;
-	border-top-right-radius: 4.05vmax;
-	border-bottom-right-radius: 3.3vmax;
-	border-bottom-left-radius: 3.3vmax;
-	background-color: #ff8147;
-	animation: head 10s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
-}
-.dog__head-c {
-	position: absolute;
-	left: 1.5vmax;
-	bottom: 0;
-	width: 9.75vmax;
-	height: 8.25vmax;
-	animation: head 10s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
-	z-index: -1;
-}
-.dog__snout {
-	position: absolute;
-	left: -1.5vmax;
-	bottom: 0;
-	width: 7.5vmax;
-	height: 3.75vmax;
-	border-top-right-radius: 3vmax;
-	border-bottom-right-radius: 3vmax;
-	border-bottom-left-radius: 4.5vmax;
-	background-color: #d7dbd2;
-	animation: snout 10s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
-}
-.dog__snout::before {
-	content: "";
-	position: absolute;
-	left: -0.1125vmax;
-	top: -0.15vmax;
-	width: 1.875vmax;
-	height: 1.125vmax;
-	border-top-right-radius: 3vmax;
-	border-bottom-right-radius: 3vmax;
-	border-bottom-left-radius: 4.5vmax;
-	background-color: #1c3130;
-	animation: snout-b 10s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
-}
-.dog__nose {
-	position: absolute;
-	top: -1.95vmax;
-	left: 40%;
-	width: 0.75vmax;
-	height: 2.4vmax;
-	border-radius: 0.525vmax;
-	transform-origin: bottom;
-	transform: rotateZ(10deg);
-	background-color: #d7dbd2;
-}
-.dog__eye-l,
-.dog__eye-r {
-	position: absolute;
-	top: -0.9vmax;
-	width: 0.675vmax;
-	height: 0.375vmax;
-	border-radius: 50%;
-	background-color: #1c3130;
-	animation: eye 10s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
-}
-.dog__eye-l {
-	left: 27%;
-}
-.dog__eye-r {
-	left: 65%;
-}
-.dog__ear-l,
-.dog__ear-r {
-	position: absolute;
-	width: 10.5vmax;
-	height: 3.375vmax;
-	border-top-left-radius: 0vmax;
-	border-top-right-radius: 0vmax;
-	border-bottom-right-radius: 3.3vmax;
-	border-bottom-left-radius: 3.3vmax;
-	background-color: #e26538;
-}
-.dog__ear-l {
-	top: 1.5vmax;
-	left: 6vmax;
-	transform-origin: bottom left;
-	transform: rotateZ(-50deg);
-	z-index: -1;
-	animation: ear-l 10s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
-}
-.dog__ear-r {
-	top: 1.5vmax;
-	right: 3vmax;
-	transform-origin: bottom right;
-	transform: rotateZ(20deg);
-	z-index: -2;
-	animation: ear-r 10s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
-}
-.dog__body {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	position: absolute;
-	bottom: 0.3vmax;
-	left: 3.75vmax;
-	width: 18.75vmax;
-	height: 7.2vmax;
-	border-top-left-radius: 3vmax;
-	border-top-right-radius: 6vmax;
-	border-bottom-right-radius: 1.5vmax;
-	border-bottom-left-radius: 6vmax;
-	background-color: #ff702e;
-	z-index: -2;
-	animation: body 10s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
-}
-.dog__tail {
-	position: absolute;
-	right: -3vmax;
-	height: 1.5vmax;
-	width: 4.5vmax;
-	background-color: #e96839;
-	border-radius: 1.5vmax;
-}
-.dog__paws {
-	position: absolute;
-	bottom: 0;
-	left: 7.5vmax;
-	width: 12vmax;
-	height: 3vmax;
-}
-.dog__bl-leg {
-	left: -3vmax;
-	z-index: -10;
-}
-.dog__bl-paw::before {
-	background-color: #bec4b6;
-}
-.dog__bl-top {
-	background-image: linear-gradient(80deg, transparent 20%, #e96839 20%);
-}
-.dog__fl-leg {
-	z-index: 10;
-}
-.dog__fl-leg {
-	left: 0;
-}
-.dog__fl-paw::before {
-	background-color: #d7dbd2;
-}
-.dog__fr-leg {
-	right: 0;
-}
-.dog__fr-paw::before {
-	background-color: #d7dbd2;
-}
-
-/*==============================*/
-@keyframes head {
-	0%,
-	10%,
-	20%,
-	26%,
-	28%,
-	90%,
-	100% {
-		height: 8.25vmax;
-		bottom: 0;
-		transform-origin: bottom right;
-		transform: rotateZ(0);
-	}
-	5%,
-	15%,
-	22%,
-	24%,
-	30% {
-		height: 8.1vmax;
-	}
-	32%,
-	50% {
-		height: 8.25vmax;
-	}
-	55%,
-	60% {
-		bottom: 0.75vmax;
-		transform-origin: bottom right;
-		transform: rotateZ(0);
-	}
-	70%,
-	80% {
-		bottom: 0.75vmax;
-		transform-origin: bottom right;
-		transform: rotateZ(10deg);
-	}
-}
-
-@keyframes body {
-	0%,
-	10%,
-	20%,
-	26%,
-	28%,
-	32%,
-	100% {
-		height: 7.2vmax;
-	}
-	5%,
-	15%,
-	22%,
-	24%,
-	30% {
-		height: 7.05vmax;
-	}
-}
-
-@keyframes ear-l {
-	0%,
-	10%,
-	20%,
-	26%,
-	28%,
-	82%,
-	100% {
-		transform: rotateZ(-50deg);
-	}
-	5%,
-	15%,
-	22%,
-	24% {
-		transform: rotateZ(-48deg);
-	}
-	30%,
-	31% {
-		transform: rotateZ(-30deg);
-	}
-	32%,
-	80% {
-		transform: rotateZ(-60deg);
-	}
-}
-
-@keyframes ear-r {
-	0%,
-	10%,
-	20%,
-	26%,
-	28% {
-		transform: rotateZ(20deg);
-	}
-	5%,
-	15%,
-	22%,
-	24% {
-		transform: rotateZ(18deg);
-	}
-	30%,
-	31% {
-		transform: rotateZ(10deg);
-	}
-	32% {
-		transform: rotateZ(25deg);
-	}
-}
-
-@keyframes snout {
-	0%,
-	10%,
-	20%,
-	26%,
-	28%,
-	82%,
-	100% {
-		height: 3.75vmax;
-	}
-	5%,
-	15%,
-	22%,
-	24% {
-		height: 3.45vmax;
-	}
-}
-
-@keyframes snout-b {
-	0%,
-	10%,
-	20%,
-	26%,
-	28%,
-	98%,
-	100% {
-		width: 1.875vmax;
-	}
-	5%,
-	15%,
-	22%,
-	24% {
-		width: 1.8vmax;
-	}
-	34%,
-	98% {
-		width: 1.275vmax;
-	}
-}
-
-@keyframes shadow {
-	0%,
-	10%,
-	20%,
-	26%,
-	28%,
-	30%,
-	84%,
-	100% {
-		width: 99%;
-	}
-	5%,
-	15%,
-	22%,
-	24% {
-		width: 101%;
-	}
-	34%,
-	81% {
-		width: 96%;
-	}
-}
-
-@keyframes eye {
-	0%,
-	30% {
-		width: 0.675vmax;
-		height: 0.3vmax;
-	}
-	32%,
-	59%,
-	90%,
-	100% {
-		width: 0.525vmax;
-		height: 0.525vmax;
-		transform: translateY(0);
-	}
-	60%,
-	75% {
-		transform: translateY(-0.3vmax);
-	}
-	80%,
-	85% {
-		transform: translateY(0.15vmax);
-	}
-}
-	</style>
 </head>
-<body>
-<h1><span style="color:#FFA500;">301 ! Doggo Waiting for Website Builder Bob...</span></h1>
 
-<div class="main">
-<div class="dog">
-<div class="dog__paws">
-<div class="dog__bl-leg leg">
-<h1 class="dog__bl-paw paw"><span style="color:#0000FF;">d</span></h1>
 
-<h1 class="dog__bl-top top"></h1>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
+  <div id="content">
+    
+<!-- preloader start -->
+<div class="preloader">
+  
+  <img src="https://zerobit.pro/images/preloader.png" alt="preloader">
+  
 </div>
+<!-- preloader end -->
 
-<div class="dog__fl-leg leg">
-<h1 class="dog__fl-paw paw"></h1>
 
-<h1 class="dog__fl-top top"></h1>
-</div>
 
-<div class="dog__fr-leg leg">
-<h1 class="dog__fr-paw paw"></h1>
 
-<h1 class="dog__fr-top top"></h1>
-</div>
-</div>
 
-<div class="dog__body">
-<h1 class="dog__tail"></h1>
-</div>
 
-<div class="dog__head">
-<div class="dog__snout">
-<h1 class="dog__nose"></h1>
+<!-- Welcome Slider-->
+<section class="hero-area" style='background-image: url("https://zerobit.pro/images/backgrounds/hero-area.webp")'>
+	
+	<img style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(https:\/\/zerobit.pro\/images\/backgrounds\/hero-area.jpg)'" src="https://zerobit.pro/images/backgrounds/hero-area.webp" />
 
-<div class="dog__eyes">
-<h1 class="dog__eye-l"></h1>
+	<div class="block">
+		
+		<h1>We Build Trust</h1>
+		<p>A cyber Security Firm. We understand security</p>
+		
+		
+		<a href="#services" class="btn btn-transparent page-scroll">Explore Us</a>
+		
+		
+	</div>
+</section>
+<!-- /Welcome Slider-->
 
-<h1 class="dog__eye-r"></h1>
-</div>
-</div>
-</div>
 
-<div class="dog__head-c">
-<h1 class="dog__ear-l"></h1>
 
-<h1 class="dog__ear-r"></h1>
-</div>
-</div>
-</div>
+<section class="sticky-top navigation">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand p-0" href="/">
+				
+				<img class="img-fluid" src="https://zerobit.pro/images/logo.png" alt="ZeroBit Solutions">
+				
+			</a>
 
-<center>
-<h1></h1>
-</center>
+			<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="#body">Home</a></li>
+					
+					
+					<li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+					
+					<li class="nav-item"><a class="nav-link" href="#services">Service</a></li>
+					
+					<li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+					
+					<li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+					
+					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+					
+
+					
+					
+
+					
+					<li class="nav-item"><a class="nav-link" target="_blank" href="https://arishti.live"></a>
+					</li>
+					
+					
+				</ul>
+				
+			</div>
+		</nav>
+	</div>
+</section>
+
+
+
+
+
+
+<!-- Start About Section -->
+<section class="bg-one about section" id="about">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-12">
+				<!-- section title -->
+				<div class="title text-center wow fadeIn" data-wow-duration="1500ms">
+					<h2>  About <span class="color">
+							 Us  </span></h2>
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+			<!-- /section title -->
+
+			
+			<!-- About item -->
+			<div class="col-lg-4 text-center wow fadeInUp" data-wow-duration="500ms">
+				<div class="block">
+					<div class="icon-box">
+						<i class="ti-blackboard"></i>
+					</div>
+					<!-- Express About Yourself -->
+					<div class="content text-center">
+						<h3>Our Community</h3>
+						<p>We&rsquo;re running our Community <a href="%22https://arishti.live%22">Arishti</a> providing Live intracrtion between Professionals and learners.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- About item -->
+			<div class="col-lg-4 text-center wow fadeInUp" data-wow-duration="500ms">
+				<div class="block">
+					<div class="icon-box">
+						<i class="ti-cup"></i>
+					</div>
+					<!-- Express About Yourself -->
+					<div class="content text-center">
+						<h3>We&#39;re Professional</h3>
+						<p>We take our Job very seriously. we do what we do best. Securing Your Resources.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- About item -->
+			<div class="col-lg-4 text-center wow fadeInUp" data-wow-duration="500ms">
+				<div class="block">
+					<div class="icon-box">
+						<i class="ti-thought"></i>
+					</div>
+					<!-- Express About Yourself -->
+					<div class="content text-center">
+						<h3>We&#39;re Genius</h3>
+						<p>We have genius minds on Board, always ready to help and secure. Meet our <a href="%22#%22">team</a> to know more</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!-- /about -->
+
+
+
+
+
+
+
+<!-- feature -->
+<section class="section section-bg about-2 padding-0" id="feature">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-6 padding-0" style="background-image: url('https://zerobit.pro'); background-size: cover; background-position: top center; background-repeat: no-repeat; min-height: 400px;">
+			
+			<img style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(https:\/\/zerobit.pro\/images\/about\/about-business-man.jpg)'" src="https://zerobit.pro" />
+			</div>
+			<div class="col-lg-6">
+				<div class="content-block">
+					<h2>We’re A Cyber Security Firm.</h2>
+					<p>We’re not just protecting users, customers, and patients. We’re protecting your business as well.</p>
+					<div class="row">
+						
+						<div class="col-lg-6">
+							<div class="media">
+								
+								<div class="align-self-start mr-3">
+									<i class="ti-world"></i>
+								</div>
+								
+								<div class="media-body">
+									<h4 class="media-heading">Cyber Security Consulting</h4>
+									<p>Our Cyber Security Consulting back your organization with years of experience working on projects for some of the world’s largest organizations</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-6">
+							<div class="media">
+								
+								<div class="align-self-start mr-3">
+									<i class="ti-panel"></i>
+								</div>
+								
+								<div class="media-body">
+									<h4 class="media-heading">Penetration Testing</h4>
+									<p>Our penetration testing team can identify cybersecurity vulnerabilities before an intruder has the opportunity to infiltrate your network or computer system.</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /feature -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- service -->
+<section id="services" class="bg-one section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-12">
+				<!-- section title -->
+				<div class="title text-center wow fadeIn" data-wow-duration="500ms">
+					<h2> Our <span class="color">
+							 Services  </span></h2>
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+			<!-- /section title -->
+
+			
+			<!-- Single Service Item -->
+			<article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+				<div class="service-block text-center">
+					<div class="service-icon text-center">
+						<i class="ti-world"></i>
+					</div>
+					<h3>Training</h3>
+					<p>We&rsquo;re Providing FREE training via <a href="%22https://arishti.live%22">Arishti</a>.</p>
+				</div>
+			</article>
+			<!-- End Single Service Item -->
+			
+		</div>
+	</div>
+</section>
+<!-- /service -->
+
+
+
+
+
+
+
+<!-- Skills -->
+<section id="skills" class="parallax-section section section-bg overly">
+	<div class="container">
+		<div class="row">
+			<!-- section title -->
+			<div class="col-lg-12">
+				<div class="title text-center">
+					<h2> Our <span class="color">
+							 Skills  </span></h2>
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+			<!-- /section title -->
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<h2>We’ve skilled in wide range of Security Solutions.</h2>
+				<p> </p>
+				
+			</div>
+			<div class="col-lg-6">
+				<ul class="skill-bar">
+					
+					
+					
+					<li>
+						<p><span>01- </span>Cyber Security Consuntant</p>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+								style="width:90%">
+							</div>
+						</div>
+					</li>
+					
+					
+					<li>
+						<p><span>02- </span>Penetration Testing</p>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+								style="width:90%">
+							</div>
+						</div>
+					</li>
+					
+					
+					<li>
+						<p><span>03- </span>Web App Security</p>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+								style="width:80%">
+							</div>
+						</div>
+					</li>
+					
+					
+					<li>
+						<p><span>04- </span>Application Security</p>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+								style="width:95%">
+							</div>
+						</div>
+					</li>
+					
+					
+					<li>
+						<p><span>05- </span>Secure Code Review</p>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+								style="width:75%">
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /skill -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Our Team -->
+<section id="team" class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <!-- section title -->
+        <div class="title text-center wow fadeInUp" data-wow-duration="500ms">
+          <h2> Our <span class="color">
+               Team </span></h2>
+          <div class="border-meghna"></div>
+        </div>
+      </div>
+      <!-- /section title -->
+
+      
+      <!-- team member -->
+      <div class="col-lg-3 col-md-6 col-12 wow fadeInDown" data-wow-duration="500ms">
+        <div class="team-member">
+          <div class="member-photo">
+            <!-- member photo -->
+            <img class="img-fluid lozad" data-src="https://zerobit.pro" onerror="this.onerror=null;this.src='https:\/\/zerobit.pro\/images\/team\/team-1.jpg'" alt="Animesh Roy">
+
+            <!-- member social profile -->
+            <div class="mask">
+              <ul class="list-inline">
+                
+                <li class="list-inline-item"><a href="https://twitter.com/anir0y"><i class="ti-twitter-alt"></i></a></li>
+                
+                <li class="list-inline-item"><a href="https://linkedin.com/in/anir0y"><i class="ti-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <!-- member name & designation -->
+          <div class="member-meta">
+            <h4>Animesh Roy</h4>
+            <span>CEO/Founder</span>
+            <p>Cyber Security Consultant</p>
+          </div>
+        </div>
+      </div>
+      <!-- end team member -->
+      
+      <!-- team member -->
+      <div class="col-lg-3 col-md-6 col-12 wow fadeInDown" data-wow-duration="500ms">
+        <div class="team-member">
+          <div class="member-photo">
+            <!-- member photo -->
+            <img class="img-fluid lozad" data-src="https://zerobit.pro" onerror="this.onerror=null;this.src='https:\/\/zerobit.pro\/images\/team\/team-2.jpg'" alt="Adhokshaj Mishra">
+
+            <!-- member social profile -->
+            <div class="mask">
+              <ul class="list-inline">
+                
+                <li class="list-inline-item"><a href="https://twitter.com/adhokshajmishra"><i class="ti-twitter-alt"></i></a></li>
+                
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/adhokshajmishra/"><i class="ti-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <!-- member name & designation -->
+          <div class="member-meta">
+            <h4>Adhokshaj Mishra</h4>
+            <span>CTO/Founder</span>
+            <p>A hobbyist C/C++ programmer.</p>
+          </div>
+        </div>
+      </div>
+      <!-- end team member -->
+      
+    </div>
+  </div>
+</section>
+<!-- /team -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Blog Section -->
+<section id="blog" class="section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-12">
+				<!-- section title -->
+				<div class="title text-center wow fadeInDown">
+					<h2> Latest <span class="color">
+						 Post </span></h2>
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+			<!-- /section title -->
+
+			
+
+			<div class="all-post text-center col-lg-12">
+				<a class="btn btn-main"
+					href="https://zerobit.pro/blog">View All Post</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /blog -->
+
+
+
+
+
+
+
+<!-- Start Contact Us -->
+<section id="contact" class="contact-us section-bg">
+	<div class="container pb-5">
+		<div class="row">
+			<div class="col-lg-12">
+				<!-- section title -->
+				<div class="title text-center wow fadeIn" data-wow-duration="500ms">
+					<h2> Contact <span class="color">
+						 Us </span></h2>
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+			<!-- /section title -->
+
+			<!-- Contact Details -->
+			<div class="contact-info col-lg-6 wow fadeInUp" data-wow-duration="500ms">
+				<h3>Contact Details</h3>
+				<p> Our Currently working office is in Hyderabad. if you&rsquo;re from other state/city feel free to use following details to reach us. </p>
+				
+				
+			</div>
+
+			<!-- Contact Form -->
+			
+			<div class="contact-details">
+				
+				<div class="con-info clearfix">
+					<i class="ti-location-pin"></i>
+					<span>301, Sai Rasik Residency. Vattal Rao Nagar. Image Hospital Lane, Hyd-34</span>
+				</div>
+				
+				<div class="con-info clearfix">
+					<i class="ti-mobile"></i>
+					<span>Phone: &#43;91 9955 00 1636</span>
+				</div>
+				
+				<div class="con-info clearfix">
+					<i class="ti-email"></i>
+					<span>Email: ani@zerobit.pro</span>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!-- /contact -->
+
+
+
+
+
+
+  </div><!-- end Contact Area -->
+<footer id="footer" class="section-bg">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-xl-12">
+
+				<!-- Footer Social Links -->
+				<div class="social-icon">
+					<ul class="list-inline">
+						
+					</ul>
+				</div>
+
+				<!-- copyright -->
+				<div class="copyright text-center">
+					<a href="https://zerobit.pro">
+						<img src="https://zerobit.pro/images/logo.png" alt="ZeroBit Solutions" />
+					</a>
+					<br>
+					<p>copyright © 2020 <a href="https://Zerobit.pro">ZeroBit Solutions</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+
+<!-- Google Map API -->
+
+
+<!-- JS Plugins -->
+
+<script src="https://zerobit.pro/plugins/jquery/jquery.min.js"></script>
+
+<script src="https://zerobit.pro/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://zerobit.pro/plugins/slick/slick.min.js"></script>
+
+<script src="https://zerobit.pro/plugins/shuffle/shuffle.min.js"></script>
+
+<script src="https://zerobit.pro/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<script src="https://zerobit.pro/plugins/lazy-load/lozad.min.js"></script>
+
+<script src="https://zerobit.pro/plugins/google-map/map.js"></script>
+
+
+<!-- Main Script -->
+
+<script src="https://zerobit.pro/js/script.min.js"></script>
 </body>
+
 </html>
